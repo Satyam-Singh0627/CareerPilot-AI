@@ -1,0 +1,131 @@
+# ==============================================================================
+# CareerPilot AI — Git Ignore Rules
+# ==============================================================================
+
+# Environment & Secrets (Never commit credentials)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+*.env
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+!*.env.example
+!backend/.env.example
+!frontend/.env.example
+
+# Credentials, Keys & Certificates
+*.pem
+*.key
+*.cert
+*.pfx
+*.p12
+*.crt
+credentials.json
+client_secrets*.json
+service-account*.json
+
+# SQLite Database & Storage (Prevent committing local student data)
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+careerpilot.db
+backend/careerpilot.db
+
+# User Uploads, Resumes & Private Generated Data
+uploads/
+resumes/
+backend/uploads/
+backend/resumes/
+*.pdf
+*.docx
+*.doc
+!docs/*.pdf
+!frontend/public/*.pdf
+
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/venv/
+venv/
+.venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Cache
+.pytest_cache/
+backend/.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.mypy_cache/
+.ruff_cache/
+.eslintcache
+
+# Node.js & Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+dist/
+dist-ssr/
+.vite/
+.turbo/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Logs & Debugging
+logs/
+*.log
+*.log.*
+debug.log
+
+# IDE & Operating System
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.temp
+
