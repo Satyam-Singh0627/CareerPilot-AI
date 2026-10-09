@@ -124,4 +124,13 @@ def test_ai_chat_deterministic_fallback():
     assert len(data["reply"]) > 20
     assert "suggestions" in data
 
+def test_custom_exception_handler_structure():
+    res = client.get("/api/careers/non-existent-career-id-999")
+    assert res.status_code == 404
+    data = res.json()
+    assert data.get("status") == "error"
+    assert data.get("code") == 404
+    assert "not found" in data.get("message", "").lower()
+
+
 
