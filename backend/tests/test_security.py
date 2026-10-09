@@ -16,4 +16,7 @@ def test_security_headers_present():
     assert res.headers.get("X-XSS-Protection") == "1; mode=block"
     assert res.headers.get("Referrer-Policy") == "strict-origin-when-cross-origin"
     assert "geolocation=()" in res.headers.get("Permissions-Policy", "")
-
+def test_rate_limiter_allows_normal_traffic():
+    for _ in range(5):
+        res = client.get("/api/health")
+        assert res.status_code == 200

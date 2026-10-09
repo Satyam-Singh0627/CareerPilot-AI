@@ -13,6 +13,10 @@ app = FastAPI(
     description="Agentic AI Career Advisor for College Students (SDG 8: Decent Work and Economic Growth)"
 )
 
+import time
+from collections import defaultdict
+from fastapi.responses import JSONResponse
+
 class SecurityHeadersMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
         response = await call_next(request)
@@ -23,6 +27,32 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
         response.headers["Permissions-Policy"] = "geolocation=(), microphone=(), camera=()"
         return response
 
+class RateLimitingMiddleware(BaseHTTPMiddleware):
+    def __init__(self, app, max_requests_per_minute: int = 120):
+        super().__init__(app)
+        self.max_requests = max_requests_per_minute
+        self.request_records = defaultdict(list)
+
+    async def dispatch(self, request: Request, call_next):
+        client_ip = request.client.host if request.client else "127.0.0.1"
+        now = time.time()
+        
+        # Clean timestamps older than 60 seconds
+        self.request_records[client_ip] = [
+            t for t in self.request_records[client_ip] if now - t < 60
+        ]
+        
+        if len(self.request_records[client_ip]) >= self.max_requests:
+            return JSONResponse(
+                status_code=429,
+                content={"detail": "Too many requests. Please wait a moment before trying again."},
+                headers={"Retry-After": "60"}
+            )
+            
+        self.request_records[client_ip].append(now)
+        return await call_next(request)
+
+app.add_middleware(RateLimitingMiddleware)
 app.add_middleware(SecurityHeadersMiddleware)
 
 # CORS middleware for development and production frontend
