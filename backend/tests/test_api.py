@@ -146,6 +146,15 @@ def test_delete_profile_endpoint():
     get_res = client.get(f"/api/profile/{p_id}")
     assert get_res.status_code == 404
 
+def test_export_profile_endpoint():
+    res = client.get("/api/profile/demo-student/export")
+    assert res.status_code == 200
+    data = res.json()
+    assert "profile" in data
+    assert "export_metadata" in data
+    assert data["profile"]["id"] == "demo-student"
+
+
 
 
 

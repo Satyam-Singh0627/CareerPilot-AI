@@ -109,6 +109,51 @@ def delete_profile(profile_id: str):
         cursor.execute("DELETE FROM profiles WHERE id = ?", (profile_id,))
     return {"status": "success", "message": f"Profile '{profile_id}' and associated data deleted"}
 
+@router.get("/{profile_id}/export")
+def export_profile_data(profile_id: str):
+    with get_db() as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM profiles WHERE id = ?", (profile_id,))
+        p_row = cursor.fetchone()
+        if not p_row:
+            raise HTTPException(status_code=404, detail=f"Profile '{profile_id}' not found")
+
+        cursor.execute("SELECT * FROM progress WHERE profile_id = ?", (profile_id,))
+        progress_rows = cursor.fetchall()
+
+        cursor.execute("SELECT * FROM roadmaps WHERE profile_id = ?", (profile_id,))
+        roadmap_rows = cursor.fetchall()
+
+        cursor.execute("SELECT * FROM chat_messages WHERE profile_id = ? ORDER BY timestamp ASC", (profile_id,))
+        chat_rows = cursor.fetchall()
+
+    return {
+        "export_metadata": {
+            "profile_id": profile_id,
+            "export_version": "1.0",
+            "sdg_target": "SDG 8: Decent Work & Economic Growth"
+        },
+        "profile": {
+            "id": p_row["id"],
+            "name": p_row["name"],
+            "email": p_row["email"],
+            "education_level": p_row["education_level"],
+            "field_of_study": p_row["field_of_study"],
+            "graduation_year": p_row["graduation_year"],
+            "current_skills": json.loads(p_row["current_skills"] or "[]"),
+            "target_roles": json.loads(p_row["target_roles"] or "[]"),
+            "interests": json.loads(p_row["interests"] or "[]"),
+            "experience_level": p_row["experience_level"],
+            "bio": p_row["bio"],
+            "preferred_work_style": p_row["preferred_work_style"],
+            "created_at": p_row.get("created_at"),
+            "updated_at": p_row.get("updated_at")
+        },
+        "progress": progress_rows,
+        "roadmaps": roadmap_rows,
+        "chat_history": chat_rows
+    }
+
 @router.get("/demo/sample", response_model=StudentProfile)
 def get_sample_demo_profile():
     demo_data = StudentProfileCreate(
