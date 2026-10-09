@@ -1,0 +1,1264 @@
+[
+  {
+    "id": "ai-ml-engineer",
+    "title": "AI & Machine Learning Engineer",
+    "domain": "Artificial Intelligence & Data",
+    "description": "Designs, trains, evaluates, and deploys predictive machine learning models and deep neural networks into scalable production environments.",
+    "sdg_impact": "Drives SDG 8 by powering productive industrial innovation, automating tedious workflows, and creating high-skill tech employment.",
+    "industry_demand": "Very High",
+    "avg_salary_usd": "$125,000 - $175,000",
+    "experience_level_target": "intermediate",
+    "core_skills": [
+      "Python",
+      "Machine Learning",
+      "Deep Learning",
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-Learn",
+      "Data Preprocessing",
+      "Model Evaluation",
+      "Mathematics & Linear Algebra"
+    ],
+    "supplementary_skills": [
+      "Docker",
+      "MLflow",
+      "SQL",
+      "Git",
+      "FastAPI",
+      "Cloud Deployment (AWS/GCP)",
+      "ONNX",
+      "Vector Databases"
+    ],
+    "soft_skills": [
+      "Analytical Thinking",
+      "Problem Solving",
+      "Research Synthesis",
+      "Ethical AI Stewardship"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Python for Data Science, Vectorized Computation with NumPy & Pandas"},
+      {"week": 2, "topic": "Exploratory Data Analysis, Feature Engineering & Missing Value Imputation"},
+      {"week": 3, "topic": "Classical Supervised Algorithms: Regression, Trees, Ensembles with Scikit-Learn"},
+      {"week": 4, "topic": "Unsupervised Learning, Dimensionality Reduction (PCA, t-SNE) & Clustering"},
+      {"week": 5, "topic": "Deep Learning Fundamentals, Backpropagation, PyTorch Tensors & Autograd"},
+      {"week": 6, "topic": "Convolutional Neural Networks (CNNs) & Computer Vision Pipelines"},
+      {"week": 7, "topic": "Recurrent Architectures, Attention Mechanisms & Transformer Basics"},
+      {"week": 8, "topic": "Natural Language Processing with Hugging Face & Fine-tuning LLMs"},
+      {"week": 9, "topic": "Model Tracking, Reproducibility with MLflow & Experiment Logging"},
+      {"week": 10, "topic": "Packaging Models as High-Throughput REST APIs with FastAPI"},
+      {"week": 11, "topic": "Containerization with Docker & Cloud Serving on AWS SageMaker / GCP"},
+      {"week": 12, "topic": "Production Monitoring, Model Drift Detection, CI/CD for ML (MLOps)"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Predictive Customer Churn Engine",
+        "level": "Beginner",
+        "description": "Build an end-to-end churn prediction pipeline with feature importance explanations using SHAP.",
+        "tech_stack": ["Python", "Scikit-Learn", "Pandas", "Matplotlib", "FastAPI"],
+        "deliverable": "Containerized API with interactive Swagger docs and feature attribution charts."
+      },
+      {
+        "title": "Multimodal Semantic Document Search",
+        "level": "Intermediate",
+        "description": "Construct a semantic search system embedding text and images using sentence-transformers and FAISS.",
+        "tech_stack": ["PyTorch", "Hugging Face", "FAISS", "FastAPI", "Docker"],
+        "deliverable": "Real-time vector search engine with sub-50ms retrieval latency."
+      },
+      {
+        "title": "Enterprise LLM Agent with Tool Calling & RAG",
+        "level": "Advanced",
+        "description": "Develop an autonomous agent capable of query decomposition, vector RAG retrieval, and structured tool execution.",
+        "tech_stack": ["Python", "LangChain/LlamaIndex", "Vector DB", "Docker", "MLflow"],
+        "deliverable": "Production-grade agent with automated evaluation benchmarks and guardrail telemetry."
+      }
+    ]
+  },
+  {
+    "id": "data-scientist",
+    "title": "Data Scientist",
+    "domain": "Artificial Intelligence & Data",
+    "description": "Leverages statistical modeling, hypothesis testing, machine learning, and business acumen to extract actionable insights from complex datasets.",
+    "sdg_impact": "Supports SDG 8 by improving organizational decision-making, optimizing resource allocation, and boosting productivity.",
+    "industry_demand": "High",
+    "avg_salary_usd": "$115,000 - $160,000",
+    "experience_level_target": "intermediate",
+    "core_skills": [
+      "Python",
+      "R",
+      "SQL",
+      "Statistics & Probability",
+      "Hypothesis Testing",
+      "Scikit-Learn",
+      "Pandas",
+      "Data Visualization"
+    ],
+    "supplementary_skills": [
+      "A/B Testing",
+      "BigQuery",
+      "Spark",
+      "Tableau",
+      "Git",
+      "Time Series Forecasting",
+      "Business Intelligence"
+    ],
+    "soft_skills": [
+      "Storytelling with Data",
+      "Strategic Thinking",
+      "Cross-functional Collaboration",
+      "Curiosity"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Descriptive Statistics, Probability Distributions & Inferential Statistics"},
+      {"week": 2, "topic": "Advanced SQL: Window Functions, CTEs & Complex Aggregations"},
+      {"week": 3, "topic": "Data Wrangling, Anomaly Detection & Cleaning with Pandas"},
+      {"week": 4, "topic": "Exploratory Data Analysis & Compelling Visualizations (Seaborn/Plotly)"},
+      {"week": 5, "topic": "Statistical Hypothesis Testing & Rigorous A/B Test Experimentation"},
+      {"week": 6, "topic": "Supervised Learning: Linear/Logistic Regression, Regularization (Ridge/Lasso)"},
+      {"week": 7, "topic": "Tree-based Ensembles (Random Forest, XGBoost, LightGBM)"},
+      {"week": 8, "topic": "Unsupervised Clustering & Customer Segmentation (K-Means, DBSCAN)"},
+      {"week": 9, "topic": "Time Series Analysis (ARIMA, Prophet, Seasonal Decomposition)"},
+      {"week": 10, "topic": "Model Explainability (SHAP, LIME) & Bias Auditing"},
+      {"week": 11, "topic": "Distributed Data Processing with PySpark & Cloud Warehouses"},
+      {"week": 12, "topic": "Executive Data Storytelling, Dashboards & Business Strategy Presentation"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Healthcare Outcome Risk Stratification",
+        "level": "Intermediate",
+        "description": "Analyze clinical patient records to predict readmission rates using calibrated ensemble models.",
+        "tech_stack": ["Python", "XGBoost", "SHAP", "Streamlit"],
+        "deliverable": "Interactive clinical risk dashboard with model interpretability breakdowns."
+      },
+      {
+        "title": "E-Commerce Dynamic Pricing & A/B Test Simulator",
+        "level": "Advanced",
+        "description": "Model price elasticity of demand and build a synthetic A/B testing simulator with power analysis.",
+        "tech_stack": ["Python", "Statsmodels", "Plotly", "FastAPI"],
+        "deliverable": "Decision-support simulator evaluating revenue lift across customer segments."
+      }
+    ]
+  },
+  {
+    "id": "data-analyst",
+    "title": "Data Analyst",
+    "domain": "Artificial Intelligence & Data",
+    "description": "Gathers, cleans, and analyzes structured data to translate metrics into executive dashboards, KPI monitors, and operational recommendations.",
+    "sdg_impact": "Fosters sustainable economic growth by identifying operational bottlenecks and supporting evidence-based business operations.",
+    "industry_demand": "Very High",
+    "avg_salary_usd": "$75,000 - $105,000",
+    "experience_level_target": "beginner",
+    "core_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Python",
+      "Data Cleaning",
+      "Business Intelligence",
+      "Reporting"
+    ],
+    "supplementary_skills": [
+      "Pandas",
+      "DAX",
+      "Git",
+      "Google Data Studio",
+      "Statistics",
+      "Snowflake"
+    ],
+    "soft_skills": [
+      "Clear Communication",
+      "Attention to Detail",
+      "Critical Thinking",
+      "Presentation Skills"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Advanced Excel: Power Query, XLOOKUP, Pivot Tables & Data Modeling"},
+      {"week": 2, "topic": "Foundations of Relational Databases & Core SQL Queries"},
+      {"week": 3, "topic": "Intermediate SQL: Joins, Subqueries & Group By Aggregations"},
+      {"week": 4, "topic": "Advanced SQL: Window Functions, CTEs, Date/Time Parsing"},
+      {"week": 5, "topic": "Data Cleaning & Preprocessing using Python Pandas"},
+      {"week": 6, "topic": "Power BI / Tableau Architecture & Connecting Data Sources"},
+      {"week": 7, "topic": "Data Modeling & Star Schema Design in BI Tools"},
+      {"week": 8, "topic": "Creating Interactive Dashboards with Drill-downs and Filters"},
+      {"week": 9, "topic": "DAX Formulations & Custom Calculated Measures"},
+      {"week": 10, "topic": "Exploratory Business Metrics: Churn, CLV, CAC, Retention"},
+      {"week": 11, "topic": "Automated ETL Data Refresh Pipelines & Alerting"},
+      {"week": 12, "topic": "Executive Presentation: Transforming Raw Metrics into Actionable Strategy"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Global Supply Chain Logistics KPI Dashboard",
+        "level": "Beginner",
+        "description": "Build an operational tracking dashboard measuring shipping delays, carrier costs, and fulfillment metrics.",
+        "tech_stack": ["SQL", "Power BI", "Excel"],
+        "deliverable": "Interactive 4-page dashboard with real-time slicing and geographic maps."
+      },
+      {
+        "title": "Subscription SaaS Cohort & Churn Retention Analysis",
+        "level": "Intermediate",
+        "description": "Perform monthly cohort retention analysis and calculate net revenue retention across segments.",
+        "tech_stack": ["PostgreSQL", "Python", "Tableau"],
+        "deliverable": "Cohort heatmaps and executive summary slide deck."
+      }
+    ]
+  },
+  {
+    "id": "full-stack-developer",
+    "title": "Full Stack Web Developer",
+    "domain": "Software Engineering",
+    "description": "Architects and develops end-to-end web applications, encompassing intuitive frontend interfaces, resilient backend APIs, and database architectures.",
+    "sdg_impact": "Accelerates digital transformation for businesses of all scales, expanding employment opportunities and modern digital infrastructure.",
+    "industry_demand": "Very High",
+    "avg_salary_usd": "$100,000 - $145,000",
+    "experience_level_target": "intermediate",
+    "core_skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Express/FastAPI",
+      "HTML5 & CSS3",
+      "SQL / PostgreSQL",
+      "RESTful APIs"
+    ],
+    "supplementary_skills": [
+      "Next.js",
+      "Tailwind CSS",
+      "Docker",
+      "Git",
+      "MongoDB",
+      "Redis",
+      "CI/CD Pipelines",
+      "GraphQL"
+    ],
+    "soft_skills": [
+      "Problem Solving",
+      "Systems Architecture",
+      "Agile Collaboration",
+      "Continuous Learning"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Modern HTML5 Semantic Standards, CSS Grid, Flexbox & Responsive Design"},
+      {"week": 2, "topic": "Modern ECMAScript (ES6+), Asynchronous JavaScript, Promises & Fetch"},
+      {"week": 3, "topic": "TypeScript Core: Types, Interfaces, Generics & Strict Type Checking"},
+      {"week": 4, "topic": "React Architecture: Components, Hooks, State Management, Vite"},
+      {"week": 5, "topic": "Advanced React: Context API, Performance Optimization, Custom Hooks"},
+      {"week": 6, "topic": "Backend API Design: Node.js/Express or Python FastAPI, Routing & Middleware"},
+      {"week": 7, "topic": "Relational Databases: Schema Design, Migrations, ORM, PostgreSQL"},
+      {"week": 8, "topic": "Authentication & Authorization: JWT, OAuth2, Session Security & CORS"},
+      {"week": 9, "topic": "State Synchronization, Caching with Redis & WebSocket Real-time Feeds"},
+      {"week": 10, "topic": "Containerization with Docker & Multi-container Docker Compose"},
+      {"week": 11, "topic": "Automated Testing: Unit, Integration & End-to-End Testing (Vitest, Pytest)"},
+      {"week": 12, "topic": "Cloud Deployment, CI/CD GitHub Actions & Production Observability"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Collaborative Real-time Kanban Workspace",
+        "level": "Intermediate",
+        "description": "Build a responsive Trello-style board with drag-and-drop, real-time collaboration, and JWT auth.",
+        "tech_stack": ["React", "TypeScript", "FastAPI / Node.js", "PostgreSQL", "WebSockets"],
+        "deliverable": "Full-stack application deployed with zero-downtime CI/CD."
+      },
+      {
+        "title": "B2B SaaS Platform with Multi-tenancy & Billing",
+        "level": "Advanced",
+        "description": "Develop a multi-tenant subscription platform with RBAC roles, audit logs, and Stripe webhooks.",
+        "tech_stack": ["Next.js / React", "TypeScript", "Tailwind CSS", "Docker", "PostgreSQL"],
+        "deliverable": "Fully tested application complete with role-based access control and analytics."
+      }
+    ]
+  },
+  {
+    "id": "backend-engineer",
+    "title": "Backend Software Engineer",
+    "domain": "Software Engineering",
+    "description": "Specializes in high-performance server-side architectures, database query optimization, microservices, and reliable API services.",
+    "sdg_impact": "Constructs durable computational infrastructure that powers digital commerce, banking, and communications.",
+    "industry_demand": "High",
+    "avg_salary_usd": "$110,000 - $155,000",
+    "experience_level_target": "intermediate",
+    "core_skills": [
+      "Python",
+      "Java / Go",
+      "SQL & PostgreSQL",
+      "RESTful APIs",
+      "System Design",
+      "Microservices",
+      "Database Indexing",
+      "Git"
+    ],
+    "supplementary_skills": [
+      "Redis",
+      "Kafka / RabbitMQ",
+      "Docker",
+      "Kubernetes",
+      "gRPC",
+      "FastAPI / Spring Boot",
+      "Linux / Bash"
+    ],
+    "soft_skills": [
+      "Reliability Engineering Mindset",
+      "Root Cause Analysis",
+      "Technical Documentation"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Advanced Object-Oriented & Functional Patterns in Backend Languages"},
+      {"week": 2, "topic": "RESTful API Standards, Error Handling & Idempotency Design"},
+      {"week": 3, "topic": "Relational Database Internals, Indexes (B-Tree), Query Execution Plans"},
+      {"week": 4, "topic": "Transactions, ACID Guarantees, Isolation Levels & Concurrency Control"},
+      {"week": 5, "topic": "In-Memory Caching Strategies (Cache-Aside, Write-Through) with Redis"},
+      {"week": 6, "topic": "Message Brokers & Asynchronous Task Processing with RabbitMQ / Kafka"},
+      {"week": 7, "topic": "Microservices Communication: gRPC, Protocol Buffers & HTTP/2"},
+      {"week": 8, "topic": "API Gateway, Rate Limiting, Throttling & Circuit Breakers"},
+      {"week": 9, "topic": "Authentication Architectures, OAuth2 OpenID Connect & Keycloak"},
+      {"week": 10, "topic": "Scalability & Distributed Systems Fundamentals (CAP Theorem, Partitioning)"},
+      {"week": 11, "topic": "Containerization & Orchestration with Docker & Helm/Kubernetes"},
+      {"week": 12, "topic": "Observability: Structured Logging, Distributed Tracing (OpenTelemetry) & Metrics"}
+    ],
+    "project_ideas": [
+      {
+        "title": "High-Throughput Distributed Rate Limiter & URL Shortener",
+        "level": "Intermediate",
+        "description": "Construct a distributed token-bucket rate limiter and URL hashing service serving 10k requests/sec.",
+        "tech_stack": ["Go or Python FastAPI", "Redis", "PostgreSQL", "Docker"],
+        "deliverable": "Benchmark report with locust load test and Grafana telemetry."
+      },
+      {
+        "title": "Event-Driven E-Commerce Order Fulfillment Pipeline",
+        "level": "Advanced",
+        "description": "Build an asynchronous saga-orchestrated order, inventory, and payment microservice pipeline.",
+        "tech_stack": ["Python / Go", "Kafka", "Docker Compose", "PostgreSQL"],
+        "deliverable": "Resilient system with automated dead-letter queues and transaction rollback."
+      }
+    ]
+  },
+  {
+    "id": "frontend-engineer",
+    "title": "Frontend Engineer",
+    "domain": "Software Engineering",
+    "description": "Crafts accessible, performant, and visually stunning client-side web interfaces with state management, animations, and responsive layouts.",
+    "sdg_impact": "Enhances digital inclusion and accessible web technology for diverse communities worldwide.",
+    "industry_demand": "High",
+    "avg_salary_usd": "$95,000 - $140,000",
+    "experience_level_target": "intermediate",
+    "core_skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "HTML5 & Semantic Web",
+      "CSS3 & Tailwind CSS",
+      "State Management",
+      "Web Performance",
+      "Git"
+    ],
+    "supplementary_skills": [
+      "Next.js",
+      "Accessibility (WCAG)",
+      "Vite",
+      "Jest / Playwright",
+      "REST & GraphQL Integration",
+      "Framer Motion"
+    ],
+    "soft_skills": [
+      "Design Sensitivity",
+      "User Empathy",
+      "Cross-browser Troubleshooting"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Advanced CSS Architecture, Flexbox, Grid, CSS Variables & Fluid Typography"},
+      {"week": 2, "topic": "Modern JavaScript Internals: Event Loop, Closures, DOM Manipulation"},
+      {"week": 3, "topic": "TypeScript Deep Dive: Generics, Utility Types & Type Narrowing"},
+      {"week": 4, "topic": "React Core Patterns: Component Composition, Render Props, Custom Hooks"},
+      {"week": 5, "topic": "Client State Management: Zustand, Redux Toolkit & React Query (TanStack)"},
+      {"week": 6, "topic": "Styling at Scale: Tailwind CSS, Design Tokens & Component Libraries"},
+      {"week": 7, "topic": "Web Accessibility (A11y): WCAG 2.1 Standards, ARIA, Keyboard Navigation"},
+      {"week": 8, "topic": "Web Performance Optimization: Core Web Vitals, Code Splitting & Lazy Loading"},
+      {"week": 9, "topic": "Micro-interactions & Smooth Motion with Framer Motion"},
+      {"week": 10, "topic": "Frontend Testing: Unit Testing with Vitest and E2E with Playwright"},
+      {"week": 11, "topic": "Modern Next.js: Server Components, Streaming SSR & Routing"},
+      {"week": 12, "topic": "Production Build Optimization, Lighthouse Auditing & CI/CD"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Interactive Financial Portfolio Analytics Suite",
+        "level": "Intermediate",
+        "description": "Build a responsive stocks and crypto dashboard with real-time charts, dark mode, and customizable widgets.",
+        "tech_stack": ["React", "TypeScript", "Tailwind CSS", "Recharts", "Lucide React"],
+        "deliverable": "Accessible, 100% Lighthouse score dashboard with offline caching."
+      }
+    ]
+  },
+  {
+    "id": "cloud-devops-engineer",
+    "title": "Cloud DevOps Engineer",
+    "domain": "Cloud & Infrastructure",
+    "description": "Bridges software engineering and IT operations by establishing continuous integration/continuous deployment pipelines, cloud provisioning, and telemetry.",
+    "sdg_impact": "Builds resilient digital infrastructure and operational efficiency that drives sustainable tech growth.",
+    "industry_demand": "Very High",
+    "avg_salary_usd": "$115,000 - $165,000",
+    "experience_level_target": "intermediate",
+    "core_skills": [
+      "Linux / Bash",
+      "Docker",
+      "Kubernetes",
+      "AWS / GCP",
+      "Terraform / IaC",
+      "CI/CD (GitHub Actions / GitLab)",
+      "Git",
+      "Networking & DNS"
+    ],
+    "supplementary_skills": [
+      "Prometheus & Grafana",
+      "Ansible",
+      "Python / Go Scripting",
+      "ArgoCD",
+      "Cloud Security",
+      "Helm"
+    ],
+    "soft_skills": [
+      "Calmness Under Pressure",
+      "Automate-first Mentality",
+      "Security Consciousness"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Linux Systems Administration, Shell Scripting & Process Management"},
+      {"week": 2, "topic": "Computer Networking: TCP/IP, DNS, TLS/SSL, Load Balancing & Subnets"},
+      {"week": 3, "topic": "Containerization: Multi-stage Docker Builds, Security Best Practices"},
+      {"week": 4, "topic": "Infrastructure as Code (IaC): Terraform Fundamentals & State Management"},
+      {"week": 5, "topic": "AWS Core Services: VPC, EC2, S3, IAM, RDS & Security Groups"},
+      {"week": 6, "topic": "CI/CD Pipeline Automation: GitHub Actions, Automated Testing & Linting"},
+      {"week": 7, "topic": "Kubernetes Architecture: Pods, Deployments, Services & Ingress Controllers"},
+      {"week": 8, "topic": "Kubernetes Package Management with Helm & ConfigMaps/Secrets"},
+      {"week": 9, "topic": "GitOps Workflows with ArgoCD & Declarative Cluster Management"},
+      {"week": 10, "topic": "Observability: Metric Collection with Prometheus & Dashboards with Grafana"},
+      {"week": 11, "topic": "Centralized Log Aggregation (ELK / Loki) & Alerting Rules"},
+      {"week": 12, "topic": "Cloud Cost Optimization, Disaster Recovery & Security Hardening"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Automated Multi-Environment GitOps Deployment Pipeline",
+        "level": "Intermediate",
+        "description": "Deploy a microservice cluster using Terraform, GitHub Actions, and ArgoCD with staging and production environments.",
+        "tech_stack": ["Terraform", "AWS", "Kubernetes", "ArgoCD", "GitHub Actions"],
+        "deliverable": "Complete declarative repo with automated rolling deployments."
+      }
+    ]
+  },
+  {
+    "id": "cloud-solutions-architect",
+    "title": "Cloud Solutions Architect",
+    "domain": "Cloud & Infrastructure",
+    "description": "Translates high-level enterprise requirements into secure, highly available, fault-tolerant, and cost-effective cloud architectures.",
+    "sdg_impact": "Fosters sustainable industrialization and technological capability across businesses.",
+    "industry_demand": "High",
+    "avg_salary_usd": "$135,000 - $190,000",
+    "experience_level_target": "advanced",
+    "core_skills": [
+      "Cloud Architecture (AWS/Azure/GCP)",
+      "High Availability Design",
+      "Enterprise Security",
+      "Cost Optimization",
+      "Disaster Recovery",
+      "Networking & Hybrid Cloud",
+      "Terraform"
+    ],
+    "supplementary_skills": [
+      "Serverless Architecture",
+      "Microservices",
+      "Compliance (SOC2/HIPAA)",
+      "System Design",
+      "TOGAF"
+    ],
+    "soft_skills": [
+      "Executive Communication",
+      "Strategic Vision",
+      "Stakeholder Management"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Cloud Well-Architected Framework: The 6 Pillars"},
+      {"week": 2, "topic": "Enterprise Networking: VPC Peering, Transit Gateway, VPN & Direct Connect"},
+      {"week": 3, "topic": "Identity & Access Management (IAM), Least Privilege & Multi-Account Orgs"},
+      {"week": 4, "topic": "High-Availability Storage Architectures: S3, EFS, EBS & Tiering"},
+      {"week": 5, "topic": "Relational vs NoSQL Cloud Databases & Multi-Region Replication"},
+      {"week": 6, "topic": "Serverless Architectures: Lambda, API Gateway, EventBridge, DynamoDB"},
+      {"week": 7, "topic": "Container Orchestration Strategies (ECS, EKS, Fargate)"},
+      {"week": 8, "topic": "Disaster Recovery Strategies: Backup & Restore, Pilot Light, Warm Standby"},
+      {"week": 9, "topic": "Cloud Security, KMS Encryption, WAF & Zero-Trust Governance"},
+      {"week": 10, "topic": "Cloud Financial Management (FinOps) & Cost Allocation Tagging"},
+      {"week": 11, "topic": "Hybrid Cloud & Migration Patterns (The 7 R's of Migration)"},
+      {"week": 12, "topic": "Architectural Review Board Presentation & Blueprint Documentation"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Multi-Region Resilient E-Commerce Cloud Infrastructure Blueprint",
+        "level": "Advanced",
+        "description": "Design and provision an active-passive multi-region cloud setup with automated DNS failover and encrypted data sync.",
+        "tech_stack": ["AWS", "Terraform", "Route 53", "Aurora Global DB"],
+        "deliverable": "Comprehensive architecture diagram, Terraform code, and RTO/RPO evaluation."
+      }
+    ]
+  },
+  {
+    "id": "cybersecurity-analyst",
+    "title": "Cybersecurity Analyst / SOC Analyst",
+    "domain": "Cybersecurity & Privacy",
+    "description": "Monitors network traffic, detects threats, investigates security incidents, and safeguards digital infrastructure against cyber intrusions.",
+    "sdg_impact": "Protects economic activity and ensures safe digital working environments free from malicious disruptions.",
+    "industry_demand": "Very High",
+    "avg_salary_usd": "$88,000 - $130,000",
+    "experience_level_target": "beginner",
+    "core_skills": [
+      "Network Security",
+      "SIEM Tools (Splunk/ELK)",
+      "Incident Response",
+      "Vulnerability Assessment",
+      "Linux & Windows Security",
+      "Wireshark / Packet Analysis",
+      "Threat Intelligence"
+    ],
+    "supplementary_skills": [
+      "Python / Bash Scripting",
+      "MITRE ATT&CK Framework",
+      "Firewalls & IDS/IPS",
+      "Endpoint Detection (EDR)",
+      "Cryptography Basics"
+    ],
+    "soft_skills": [
+      "Attention to Anomalies",
+      "Methodical Investigation",
+      "Ethical Integrity",
+      "Crisis Management"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Cybersecurity Principles: Confidentiality, Integrity, Availability & Threat Models"},
+      {"week": 2, "topic": "Networking Protocols (TCP, UDP, ICMP, DNS, HTTP) & Wireshark Packet Inspection"},
+      {"week": 3, "topic": "Operating System Hardening for Linux & Windows Server"},
+      {"week": 4, "topic": "Understanding Malware Types, Attack Vectors & Phishing Analysis"},
+      {"week": 5, "topic": "MITRE ATT&CK Framework: Mapping Tactics, Techniques & Procedures (TTPs)"},
+      {"week": 6, "topic": "Security Information and Event Management (SIEM): Splunk / Wazuh Setup"},
+      {"week": 7, "topic": "Writing Detection Rules & Correlation Searches for Suspicious Behaviors"},
+      {"week": 8, "topic": "Vulnerability Scanning & CVE Assessment with Nessus / OpenVAS"},
+      {"week": 9, "topic": "Incident Response Lifecycle (NIST SP 800-61): Identification, Containment, Eradication"},
+      {"week": 10, "topic": "Endpoint Detection and Response (EDR) & Memory Forensics"},
+      {"week": 11, "topic": "Threat Hunting Fundamentals & OSINT Intelligence Gathering"},
+      {"week": 12, "topic": "Post-Incident Forensic Reporting & Executive Risk Briefings"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Home Security Lab with Wazuh SIEM & Snort IDS",
+        "level": "Intermediate",
+        "description": "Build a virtualized honeypot and SOC monitoring lab detecting brute force and port scans in real time.",
+        "tech_stack": ["Wazuh", "Snort", "Linux", "Sysmon", "VirtualBox"],
+        "deliverable": "Documented incident response runbook and alert correlation rules."
+      }
+    ]
+  },
+  {
+    "id": "penetration-tester",
+    "title": "Penetration Tester & Ethical Hacker",
+    "domain": "Cybersecurity & Privacy",
+    "description": "Simulates real-world cyberattacks against web apps, internal networks, and cloud assets to identify vulnerabilities before adversaries exploit them.",
+    "sdg_impact": "Secures economic enterprises and online trade from financial exploitation and cyber threats.",
+    "industry_demand": "High",
+    "avg_salary_usd": "$105,000 - $155,000",
+    "experience_level_target": "intermediate",
+    "core_skills": [
+      "Web Application Security (OWASP Top 10)",
+      "Burp Suite",
+      "Network Penetration Testing",
+      "Linux / Kali Linux",
+      "Scripting (Python / Bash)",
+      "Metasploit",
+      "Vulnerability Exploitation"
+    ],
+    "supplementary_skills": [
+      "Privilege Escalation",
+      "Active Directory Attacks",
+      "Wireless Security",
+      "Reverse Engineering Basics",
+      "Report Writing"
+    ],
+    "soft_skills": [
+      "Adversarial Mindset",
+      "Ethical Rigor",
+      "Tenacity",
+      "Technical Storytelling"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Ethical Hacking Methodologies (PTES), Scoping, Rules of Engagement & Law"},
+      {"week": 2, "topic": "Passive & Active Reconnaissance: Nmap, DNS Enumeration, Shodan, OSINT"},
+      {"week": 3, "topic": "Web Application Security: OWASP Top 10 Deep Dive (SQLi, XSS, SSRF, IDOR)"},
+      {"week": 4, "topic": "Mastering Burp Suite: Intercepting, Repeater, Intruder & Extensions"},
+      {"week": 5, "topic": "Authentication & Session Flaws: JWT Manipulation, OAuth Bypass"},
+      {"week": 6, "topic": "Network Service Exploitation & Metasploit Framework Workflows"},
+      {"week": 7, "topic": "Linux Privilege Escalation: SUID, Cron Jobs, Capabilities & Kernel Exploits"},
+      {"week": 8, "topic": "Windows & Active Directory Basics: Kerberoasting, LLMNR Poisoning"},
+      {"week": 9, "topic": "API Security Testing: GraphQL & RESTful Vulnerabilities"},
+      {"week": 10, "topic": "Wireless Network Assessment & Social Engineering Tactics"},
+      {"week": 11, "topic": "Remediation Verification & Defense Recommendations"},
+      {"week": 12, "topic": "Executive & Technical Penetration Testing Report Writing"}
+    ],
+    "project_ideas": [
+      {
+        "title": "OWASP Juice Shop Vulnerability Assessment & Remediation Report",
+        "level": "Intermediate",
+        "description": "Systematically discover and document 15 vulnerabilities across injection, broken auth, and security misconfigurations.",
+        "tech_stack": ["Burp Suite", "OWASP ZAP", "Python", "Kali Linux"],
+        "deliverable": "Industry-standard penetration testing report with PoCs and remediation steps."
+      }
+    ]
+  },
+  {
+    "id": "ui-ux-designer",
+    "title": "UI/UX Product Designer",
+    "domain": "Design & User Experience",
+    "description": "Conducts user research, designs wireframes and high-fidelity interactive prototypes, and builds scalable design systems for intuitive user experiences.",
+    "sdg_impact": "Fosters productive user empowerment and inclusive digital access through intuitive, frictionless digital tools.",
+    "industry_demand": "High",
+    "avg_salary_usd": "$85,000 - $130,000",
+    "experience_level_target": "beginner",
+    "core_skills": [
+      "Figma",
+      "User Research & Personas",
+      "Wireframing & Prototyping",
+      "Design Systems",
+      "Information Architecture",
+      "Usability Testing",
+      "Visual Design"
+    ],
+    "supplementary_skills": [
+      "HTML/CSS Basics",
+      "Micro-animations",
+      "Accessibility (WCAG)",
+      "Design Thinking",
+      "Framer / Webflow",
+      "UX Copywriting"
+    ],
+    "soft_skills": [
+      "Empathy",
+      "Active Listening",
+      "Visual Storytelling",
+      "Constructive Critique"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Foundations of Human-Centered Design & Design Thinking Principles"},
+      {"week": 2, "topic": "Conducting Qualitative User Interviews & Synthesizing Empathy Maps"},
+      {"week": 3, "topic": "Information Architecture: Sitemaps, Card Sorting & User Flows"},
+      {"week": 4, "topic": "Low-Fidelity Wireframing & Rapid Paper Prototyping"},
+      {"week": 5, "topic": "Mastering Figma: Auto-layout, Variants, Component Sets & Styles"},
+      {"week": 6, "topic": "Visual Design Principles: Hierarchy, Grid Systems, Typography & Color Harmony"},
+      {"week": 7, "topic": "Building Scalable Design Systems & UI Component Libraries"},
+      {"week": 8, "topic": "Micro-interactions & High-Fidelity Interactive Prototyping in Figma"},
+      {"week": 9, "topic": "Designing for Accessibility: Color Contrast, Screen Readers & Scalability"},
+      {"week": 10, "topic": "Planning & Moderating Usability Testing Sessions"},
+      {"week": 11, "topic": "Design Handoff: Preparing Specs, Tokens & Collaborating with Developers"},
+      {"week": 12, "topic": "Curating an Impact-Driven UX Case Study Portfolio"}
+    ],
+    "project_ideas": [
+      {
+        "title": "FinTech Mobile Micro-Investing App Redesign",
+        "level": "Intermediate",
+        "description": "Conduct user research and design an accessible investment app for first-generation student savers.",
+        "tech_stack": ["Figma", "FigJam", "Miro", "Maze"],
+        "deliverable": "Interactive clickable prototype accompanied by full research case study."
+      }
+    ]
+  },
+  {
+    "id": "mobile-app-developer",
+    "title": "Mobile App Developer (Flutter / React Native)",
+    "domain": "Mobile Development",
+    "description": "Engineers smooth, responsive cross-platform native mobile applications with offline storage, device sensors, and push notifications.",
+    "sdg_impact": "Expands mobile access to employment, financial, and educational services globally.",
+    "industry_demand": "High",
+    "avg_salary_usd": "$95,000 - $140,000",
+    "experience_level_target": "intermediate",
+    "core_skills": [
+      "Flutter / Dart",
+      "React Native",
+      "Mobile UI Design",
+      "State Management (Riverpod / Redux)",
+      "REST & GraphQL APIs",
+      "SQLite / Hive / Room",
+      "Git"
+    ],
+    "supplementary_skills": [
+      "Firebase / Push Notifications",
+      "iOS / Swift Basics",
+      "Android / Kotlin Basics",
+      "App Store & Play Store Publishing",
+      "Offline Sync"
+    ],
+    "soft_skills": [
+      "Attention to Touch Responsiveness",
+      "Mobile Performance Optimization",
+      "User-Centric Iteration"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Dart / TypeScript Fundamentals for Mobile Applications"},
+      {"week": 2, "topic": "Mobile Layouts: Widgets, Flexbox, Safe Area & Device Dimensions"},
+      {"week": 3, "topic": "Navigation Patterns: Stack, Tabs, Drawer & Deep Linking"},
+      {"week": 4, "topic": "State Management in Mobile Frameworks (Riverpod, Bloc, or Zustand)"},
+      {"week": 5, "topic": "Integrating RESTful Backend Services & Token-Based Authentication"},
+      {"week": 6, "topic": "Offline-first Architectures: Local Caching with SQLite & Hive"},
+      {"week": 7, "topic": "Accessing Native Hardware: Camera, Geolocation, Accelerometer & Biometrics"},
+      {"week": 8, "topic": "Push Notifications: Firebase Cloud Messaging & Background Tasks"},
+      {"week": 9, "topic": "Optimizing App Performance: Reducing Bundle Size & Frame Drops"},
+      {"week": 10, "topic": "Mobile Testing: Widget Tests, Unit Tests & Integration Tests"},
+      {"week": 11, "topic": "App Store & Google Play Store Submission Guidelines & Asset Preparation"},
+      {"week": 12, "topic": "Automated Mobile CI/CD with Fastlane & GitHub Actions"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Smart Habit Tracker & Productivity Companion",
+        "level": "Intermediate",
+        "description": "Create an offline-first habit tracker with streak analytics, local notifications, and biometric auth.",
+        "tech_stack": ["Flutter", "Dart", "Hive", "Local Notifications"],
+        "deliverable": "Working APK and iOS test build with smooth fluid animations."
+      }
+    ]
+  },
+  {
+    "id": "mlops-engineer",
+    "title": "MLOps Engineer",
+    "domain": "Artificial Intelligence & Data",
+    "description": "Automates the lifecycle of machine learning models from continuous training and validation to low-latency cloud inference and drift monitoring.",
+    "sdg_impact": "Accelerates productive adoption of AI technologies across industrial and commercial workflows.",
+    "industry_demand": "Very High",
+    "avg_salary_usd": "$130,000 - $185,000",
+    "experience_level_target": "advanced",
+    "core_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "MLflow / Weights & Biases",
+      "CI/CD for ML",
+      "Model Serving (Triton / TorchServe / FastAPI)",
+      "Feature Stores (Feast)",
+      "Data Versioning (DVC)"
+    ],
+    "supplementary_skills": [
+      "Kubeflow",
+      "AWS SageMaker",
+      "Prometheus & Grafana",
+      "Terraform",
+      "Kafka"
+    ],
+    "soft_skills": [
+      "DevOps Rigor",
+      "Systems Troubleshooting",
+      "Bridging Science & Engineering"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "The MLOps Maturity Model & Challenges in Production ML"},
+      {"week": 2, "topic": "Data & Pipeline Versioning using DVC and Remote Storage"},
+      {"week": 3, "topic": "Experiment Tracking and Model Registry Management with MLflow"},
+      {"week": 4, "topic": "Building Automated Training Pipelines with Prefect / Airflow"},
+      {"week": 5, "topic": "Packaging Models with Docker & Optimizing Latency (ONNX Runtime)"},
+      {"week": 6, "topic": "High-Throughput Model Serving with FastAPI & Triton Inference Server"},
+      {"week": 7, "topic": "Feature Stores: Setting Up Online/Offline Stores with Feast"},
+      {"week": 8, "topic": "CI/CD for Machine Learning (CML) & Automated Model Testing on GitHub Actions"},
+      {"week": 9, "topic": "Deploying Kubernetes Clusters for ML Inference & Auto-scaling"},
+      {"week": 10, "topic": "Detecting Data Drift, Concept Drift & Model Degradation (Evidently AI)"},
+      {"week": 11, "topic": "Canary Deployments, Shadow Deployments & A/B Testing for Models"},
+      {"week": 12, "topic": "End-to-End Governance, Lineage Tracking & Compliance"}
+    ],
+    "project_ideas": [
+      {
+        "title": "End-to-End Automated Continuous Training & Serving Pipeline",
+        "level": "Advanced",
+        "description": "Construct a GitOps-driven ML pipeline that retrains on data updates, benchmarks against baseline, and rolls out to k8s.",
+        "tech_stack": ["Python", "FastAPI", "Docker", "MLflow", "DVC", "GitHub Actions"],
+        "deliverable": "Fully reproducible pipeline repository with drift alert telemetry."
+      }
+    ]
+  },
+  {
+    "id": "nlp-specialist",
+    "title": "Natural Language Processing (NLP) Specialist",
+    "domain": "Artificial Intelligence & Data",
+    "description": "Builds and tunes transformer models, semantic embeddings, conversational agents, and generative AI systems for text and speech analysis.",
+    "sdg_impact": "Overcomes linguistic barriers, democratizing information access and modern knowledge economy opportunities.",
+    "industry_demand": "High",
+    "avg_salary_usd": "$125,000 - $175,000",
+    "experience_level_target": "advanced",
+    "core_skills": [
+      "Python",
+      "PyTorch",
+      "Hugging Face Transformers",
+      "LLM Fine-Tuning (LoRA, QLoRA)",
+      "Vector Databases (Milvus / Pinecone / Chroma)",
+      "Retrieval-Augmented Generation (RAG)",
+      "NLP Evaluation Metrics (BLEU, ROUGE)"
+    ],
+    "supplementary_skills": [
+      "LangChain",
+      "LlamaIndex",
+      "vLLM",
+      "Tokenization Algorithms",
+      "Prompt Engineering",
+      "Docker"
+    ],
+    "soft_skills": [
+      "Linguistic Sensitivity",
+      "Research Analysis",
+      "Creative Solution Engineering"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Classical NLP: Tokenization, Stemming, Lemmatization, TF-IDF, N-grams"},
+      {"week": 2, "topic": "Word Embeddings: Word2Vec, GloVe & FastText Semantics"},
+      {"week": 3, "topic": "Sequential Models: RNNs, LSTMs & GRUs for Text Modeling"},
+      {"week": 4, "topic": "The Transformer Architecture: Self-Attention, Multi-Head Attention & Positional Encoding"},
+      {"week": 5, "topic": "BERT, RoBERTa & Masked Language Modeling for Classification"},
+      {"week": 6, "topic": "Generative Pre-trained Transformers (GPT) & Autoregressive Decoding"},
+      {"week": 7, "topic": "Sentence Embeddings, Cosine Similarity & Vector Search Architectures"},
+      {"week": 8, "topic": "Retrieval-Augmented Generation (RAG) Architecture & Chunking Strategies"},
+      {"week": 9, "topic": "Parameter-Efficient Fine-Tuning (PEFT) with LoRA and QLoRA"},
+      {"week": 10, "topic": "Serving LLMs with High Throughput using vLLM & TGI"},
+      {"week": 11, "topic": "Guardrails, Hallucination Detection & Toxicity Mitigation"},
+      {"week": 12, "topic": "Building Multi-turn Conversational Agents with Tool-Use Capabilities"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Domain-Specific Technical Knowledge RAG Assistant",
+        "level": "Intermediate",
+        "description": "Construct an accurate RAG assistant for scientific research papers with citations and semantic reranking.",
+        "tech_stack": ["Python", "Hugging Face", "ChromaDB", "FastAPI", "Streamlit"],
+        "deliverable": "Working web app with citation verification and latency under 1 second."
+      }
+    ]
+  },
+  {
+    "id": "site-reliability-engineer",
+    "title": "Site Reliability Engineer (SRE)",
+    "domain": "Cloud & Infrastructure",
+    "description": "Applies software engineering disciplines to infrastructure challenges to ensure maximum uptime, resilient fault tolerance, and rapid disaster recovery.",
+    "sdg_impact": "Maintains mission-critical digital systems that underpin global trade, banking, and communications.",
+    "industry_demand": "Very High",
+    "avg_salary_usd": "$120,000 - $170,000",
+    "experience_level_target": "advanced",
+    "core_skills": [
+      "Linux Internals",
+      "Python / Go",
+      "SLOs / SLIs / Error Budgets",
+      "Kubernetes",
+      "Incident Management",
+      "Prometheus & Alertmanager",
+      "Chaos Engineering"
+    ],
+    "supplementary_skills": [
+      "Terraform",
+      "Distributed Tracing (Jaeger)",
+      "Networking & eBPF",
+      "Capacity Planning",
+      "Docker"
+    ],
+    "soft_skills": [
+      "Root Cause Investigation",
+      "Blameless Post-Mortem Facilitation",
+      "Calm Decisiveness"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "SRE Principles: Embracing Risk, Error Budgets, SLIs & SLOs"},
+      {"week": 2, "topic": "Linux Kernel Internals, Memory Management, CPU Scheduling & I/O Subsystems"},
+      {"week": 3, "topic": "Advanced Shell Scripting & Tooling in Go/Python for System Automation"},
+      {"week": 4, "topic": "Distributed System Failures: Cascading Failures, Thundering Herds & Retries"},
+      {"week": 5, "topic": "Modern Telemetry: The 4 Golden Signals (Latency, Traffic, Errors, Saturation)"},
+      {"week": 6, "topic": "Prometheus PromQL Mastery & Tuning Meaningful Alert Thresholds"},
+      {"week": 7, "topic": "Kubernetes Reliability: Resource Limits, HPA, Pod Disruption Budgets"},
+      {"week": 8, "topic": "Distributed Tracing with OpenTelemetry & Bottleneck Identification"},
+      {"week": 9, "topic": "Incident Command: On-call Operations, Triage, Escalation & Severity Levels"},
+      {"week": 10, "topic": "Chaos Engineering with Chaos Mesh: Injecting Latency, Packet Loss & Pod Failure"},
+      {"week": 11, "topic": "Conducting Blameless Post-Mortems & Actionable Remediation Plans"},
+      {"week": 12, "topic": "Capacity Planning, Load Testing & Auto-scaling Architectures"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Autonomous Self-Healing Kubernetes Cluster Monitoring",
+        "level": "Advanced",
+        "description": "Implement automated remediation controllers that detect failing pods, scale nodes, and manage error budgets.",
+        "tech_stack": ["Go/Python", "Kubernetes", "Prometheus", "Helm"],
+        "deliverable": "Configured cluster with simulated chaos injection and automated self-healing."
+      }
+    ]
+  },
+  {
+    "id": "bi-developer",
+    "title": "Business Intelligence (BI) Developer",
+    "domain": "Artificial Intelligence & Data",
+    "description": "Designs and manages enterprise data warehouse models, ETL processes, and analytical dashboards that turn raw business metrics into actionable growth strategies.",
+    "sdg_impact": "Improves organizational operational transparency and drives sustainable economic decision-making.",
+    "industry_demand": "High",
+    "avg_salary_usd": "$85,000 - $125,000",
+    "experience_level_target": "intermediate",
+    "core_skills": [
+      "SQL",
+      "Power BI / Tableau",
+      "Data Warehousing (Kimball / Star Schema)",
+      "ETL / ELT (dbt)",
+      "DAX / MDX",
+      "Data Modeling",
+      "Snowflake / BigQuery"
+    ],
+    "supplementary_skills": [
+      "Python",
+      "Airflow",
+      "Excel",
+      "Git",
+      "SSIS / Azure Data Factory"
+    ],
+    "soft_skills": [
+      "Business Domain Acumen",
+      "Stakeholder Communication",
+      "Data Quality Advocacy"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Dimensional Modeling: Facts, Dimensions, Star Schema vs Snowflake Schema"},
+      {"week": 2, "topic": "Advanced SQL: Analytical Functions, Partitioning & Rollup/Cube Aggregates"},
+      {"week": 3, "topic": "Cloud Data Warehouses: Snowflake & Google BigQuery Architecture"},
+      {"week": 4, "topic": "Modern Data Stack Transformations using dbt (Data Build Tool)"},
+      {"week": 5, "topic": "Designing Power BI Data Models & Managing Cardinalities"},
+      {"week": 6, "topic": "Advanced DAX: Time Intelligence, FILTER, CALCULATE & Dynamic Measures"},
+      {"week": 7, "topic": "Data Governance, Row-Level Security (RLS) & Workspace Access Control"},
+      {"week": 8, "topic": "Automating Data Ingestion with Airflow / Azure Data Factory"},
+      {"week": 9, "topic": "Data Quality Testing: Automated Assertions & Anomaly Alerts"},
+      {"week": 10, "topic": "Performance Tuning: Aggregation Tables & DirectQuery vs Import Mode"},
+      {"week": 11, "topic": "Embedded Analytics: Integrating BI Dashboards into Web Portals"},
+      {"week": 12, "topic": "Enterprise Executive Reporting & ROI Impact Presentation"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Enterprise E-Commerce Data Warehouse & Executive BI Suite",
+        "level": "Intermediate",
+        "description": "Build an end-to-end data pipeline from raw transactional databases to dbt transformations and Power BI reports.",
+        "tech_stack": ["Snowflake / DuckDB", "dbt", "Power BI", "SQL"],
+        "deliverable": "Multi-tier dimensional data warehouse with automated daily refreshes and KPI dashboards."
+      }
+    ]
+  },
+  {
+    "id": "blockchain-developer",
+    "title": "Blockchain & Web3 Developer",
+    "domain": "Software Engineering",
+    "description": "Builds decentralized applications, secure smart contracts, and cryptographic protocols for transparent finance and digital verification.",
+    "sdg_impact": "Enables transparent financial inclusion, decentralized identity, and fraud-resistant transactions.",
+    "industry_demand": "Moderate",
+    "avg_salary_usd": "$110,000 - $165,000",
+    "experience_level_target": "intermediate",
+    "core_skills": [
+      "Solidity",
+      "Ethereum Virtual Machine (EVM)",
+      "Smart Contract Security",
+      "JavaScript / TypeScript",
+      "Ethers.js / Viem",
+      "Hardhat / Foundry",
+      "Web3 Architecture"
+    ],
+    "supplementary_skills": [
+      "Rust (Solana)",
+      "IPFS",
+      "OpenZeppelin",
+      "React",
+      "Cryptography (Zero Knowledge Basics)"
+    ],
+    "soft_skills": [
+      "Security Paranoia",
+      "Formal Verification Mindset",
+      "Independent Research"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Blockchain Fundamentals: Distributed Ledgers, Proof of Stake, Cryptographic Hashing"},
+      {"week": 2, "topic": "EVM Architecture, Gas Optimization & Transaction Lifecycles"},
+      {"week": 3, "topic": "Solidity Syntax: State Variables, Mappings, Modifiers & Events"},
+      {"week": 4, "topic": "ERC Standards: ERC-20 (Tokens) & ERC-721/1155 (NFTs) with OpenZeppelin"},
+      {"week": 5, "topic": "Smart Contract Testing Frameworks: Foundry / Hardhat with TypeScript"},
+      {"week": 6, "topic": "Smart Contract Security: Reentrancy, Overflow, Front-running & Auditing"},
+      {"week": 7, "topic": "Interacting with Contracts from Frontend using Wagmi, Viem & React"},
+      {"week": 8, "topic": "Decentralized Storage: IPFS, Filecoin & Metadata Pinning"},
+      {"week": 9, "topic": "Layer 2 Scaling Solutions: Optimistic Rollups & ZK-Rollups"},
+      {"week": 10, "topic": "Oracles: Fetching Real-World Data with Chainlink Data Feeds & VRF"},
+      {"week": 11, "topic": "Decentralized Finance (DeFi) Protocols: Automated Market Makers (AMM) & Staking"},
+      {"week": 12, "topic": "Deploying, Verifying & Auditing Smart Contracts on Testnets"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Decentralized Escrow & Milestone Funding Protocol",
+        "level": "Intermediate",
+        "description": "Construct an audited smart contract escrow system with multi-signature arbitration and a React frontend.",
+        "tech_stack": ["Solidity", "Foundry", "React", "TypeScript", "Viem"],
+        "deliverable": "Tested smart contract suite with 100% test coverage and deployed testnet dApp."
+      }
+    ]
+  },
+  {
+    "id": "technical-product-manager",
+    "title": "Technical Product Manager",
+    "domain": "Product & Management",
+    "description": "Defines product strategy, roadmaps, technical requirements, and feature prioritization to steer software engineering teams toward high-impact business outcomes.",
+    "sdg_impact": "Directs technological innovation toward high-value societal problems and productive enterprise growth.",
+    "industry_demand": "High",
+    "avg_salary_usd": "$115,000 - $160,000",
+    "experience_level_target": "intermediate",
+    "core_skills": [
+      "Product Strategy & Roadmap Planning",
+      "Agile & Scrum Methodologies",
+      "Technical Requirements (PRDs)",
+      "User Research & Discovery",
+      "Metrics & Analytics (Mixpanel/Amplitude)",
+      "Stakeholder Management",
+      "A/B Testing"
+    ],
+    "supplementary_skills": [
+      "Basic SQL / Data Analysis",
+      "System Architecture Understanding",
+      "Figma Wireframing",
+      "Jira / Confluence",
+      "Go-To-Market (GTM) Planning"
+    ],
+    "soft_skills": [
+      "Influence Without Authority",
+      "Strategic Prioritization",
+      "Executive Storytelling",
+      "User Empathy"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "The Product Lifecycle & The Dual Role of Technical Product Managers"},
+      {"week": 2, "topic": "Customer Discovery Interviews, Jobs-to-be-Done (JTBD) & Problem Definition"},
+      {"week": 3, "topic": "Market Research, Competitive Moats & Value Proposition Design"},
+      {"week": 4, "topic": "Drafting World-Class Product Requirement Documents (PRDs) & User Stories"},
+      {"week": 5, "topic": "Prioritization Frameworks: RICE, MoSCoW, Kano Model & Value vs Effort"},
+      {"week": 6, "topic": "Technical Literacy: Understanding APIs, Microservices, Databases & Cloud"},
+      {"week": 7, "topic": "Agile Sprints, Backlog Grooming, Velocity Tracking & Jira Management"},
+      {"week": 8, "topic": "Defining North Star Metrics, OKRs & Product Telemetry (Amplitude / Mixpanel)"},
+      {"week": 9, "topic": "Designing Rigorous Feature A/B Tests & Statistical Significance Evaluation"},
+      {"week": 10, "topic": "Go-To-Market (GTM) Strategy, Beta Rollouts & Product Marketing Alignment"},
+      {"week": 11, "topic": "Managing Technical Debt vs Feature Velocity with Engineering Leads"},
+      {"week": 12, "topic": "Executive Pitch: Defending a High-Impact Multi-Quarter Roadmap"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Comprehensive PRD & Go-to-Market Portfolio for an AI Workflow Tool",
+        "level": "Intermediate",
+        "description": "Author an end-to-end product requirements document with technical architecture, user flows, RICE scoring, and launch strategy.",
+        "tech_stack": ["PRD Framework", "Figma", "Jira", "SQL"],
+        "deliverable": "Industry-grade product package ready for engineering handoff and executive review."
+      }
+    ]
+  },
+  {
+    "id": "qa-automation-engineer",
+    "title": "QA Automation & Test Engineer",
+    "domain": "Software Engineering",
+    "description": "Builds automated end-to-end, API, and load testing frameworks to safeguard software reliability, prevent regressions, and enable continuous delivery.",
+    "sdg_impact": "Guarantees high-integrity software products, minimizing costly downtime and systemic errors.",
+    "industry_demand": "High",
+    "avg_salary_usd": "$80,000 - $120,000",
+    "experience_level_target": "beginner",
+    "core_skills": [
+      "Test Automation (Playwright / Cypress / Selenium)",
+      "Python / JavaScript",
+      "API Testing (Postman / REST Assured)",
+      "CI/CD Integration",
+      "Test Strategy & Test Cases",
+      "Git",
+      "SQL Basics"
+    ],
+    "supplementary_skills": [
+      "Performance Testing (k6 / JMeter)",
+      "Docker",
+      "BDD (Cucumber)",
+      "Mobile Testing (Appium)",
+      "Security Testing Basics"
+    ],
+    "soft_skills": [
+      "Edge Case Intuition",
+      "Attention to Precision",
+      "Advocacy for Quality"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Software Testing Foundations: Test Pyramid, Regression, Smoke & Sanity Testing"},
+      {"week": 2, "topic": "Writing Effective Test Cases, Acceptance Criteria & Bug Reports"},
+      {"week": 3, "topic": "Manual API Testing with Postman: Requests, Assertions & Environment Variables"},
+      {"week": 4, "topic": "Automated API Testing in Python with Pytest & Requests"},
+      {"week": 5, "topic": "Modern E2E Web Testing: Playwright Framework Setup & Architecture"},
+      {"week": 6, "topic": "Page Object Model (POM) Design Pattern for Maintainable Test Suites"},
+      {"week": 7, "topic": "Handling Asynchronous UI, Dynamic Waits, Shadow DOM & Iframes"},
+      {"week": 8, "topic": "Data-Driven Testing & Mocking External Dependencies"},
+      {"week": 9, "topic": "Performance & Load Testing with k6: Simulating Concurrent Users"},
+      {"week": 10, "topic": "Embedding Automated Tests into GitHub Actions CI Pipelines"},
+      {"week": 11, "topic": "Visual Regression Testing & Cross-Browser Validation"},
+      {"week": 12, "topic": "Test Coverage Analytics, Reporting Dashboards & Quality Gates"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Automated End-to-End Regression Framework for E-Commerce",
+        "level": "Intermediate",
+        "description": "Design an automated test harness covering user authentication, checkout, API contracts, and performance load.",
+        "tech_stack": ["Playwright", "TypeScript", "k6", "GitHub Actions"],
+        "deliverable": "CI-integrated automated test suite with HTML report artifacts."
+      }
+    ]
+  },
+  {
+    "id": "embedded-iot-engineer",
+    "title": "Embedded Systems & IoT Engineer",
+    "domain": "Hardware & IoT",
+    "description": "Develops low-level firmware, micro-controller drivers, and IoT telemetry pipelines that connect physical devices to modern cloud analytics.",
+    "sdg_impact": "Powers sustainable industrial automation, renewable energy monitoring, and smart infrastructure.",
+    "industry_demand": "Moderate",
+    "avg_salary_usd": "$95,000 - $145,000",
+    "experience_level_target": "intermediate",
+    "core_skills": [
+      "C / C++",
+      "Microcontrollers (ESP32, ARM Cortex, STM32)",
+      "Hardware Protocols (I2C, SPI, UART)",
+      "RTOS (FreeRTOS)",
+      "IoT Protocols (MQTT, CoAP)",
+      "Linux Embedded Basics",
+      "Git"
+    ],
+    "supplementary_skills": [
+      "Python",
+      "PCB Design Basics (KiCad)",
+      "Bluetooth BLE / Wi-Fi",
+      "Cloud IoT Hubs (AWS IoT)",
+      "Oscilloscope / Logic Analyzer"
+    ],
+    "soft_skills": [
+      "Patience with Hardware",
+      "Safety Critical Thinking",
+      "Hands-on Prototyping"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "C Programming for Embedded Systems: Pointers, Bit Manipulation & Memory Layout"},
+      {"week": 2, "topic": "Microcontroller Architecture: GPIO, Timers, Interrupts & ADC/DAC"},
+      {"week": 3, "topic": "Hardware Communication Protocols: I2C & SPI Sensor Interfacing"},
+      {"week": 4, "topic": "UART Serial Communication, Buffering & Packet Framing"},
+      {"week": 5, "topic": "Real-Time Operating Systems (FreeRTOS): Tasks, Queues, Mutexes & Semaphores"},
+      {"week": 6, "topic": "Low-Power Optimization: Sleep Modes & Battery Conservation"},
+      {"week": 7, "topic": "Wireless Connectivity: ESP32 Wi-Fi & Bluetooth Low Energy (BLE)"},
+      {"week": 8, "topic": "IoT Cloud Telemetry: MQTT Publish/Subscribe & JSON Payloads"},
+      {"week": 9, "topic": "Over-The-Air (OTA) Firmware Updates & Cryptographic Verification"},
+      {"week": 10, "topic": "Hardware Debugging with Logic Analyzers, JTAG & GDB"},
+      {"week": 11, "topic": "Edge Sensor Data Filtering (Kalman Filter, Moving Averages)"},
+      {"week": 12, "topic": "End-to-End Industrial IoT Gateway Integration with Cloud Telemetry"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Smart Industrial Environmental Monitor with Cloud Telemetry",
+        "level": "Intermediate",
+        "description": "Construct an ESP32-based multi-sensor device publishing temperature, humidity, and air quality via MQTT with OTA support.",
+        "tech_stack": ["C++ / FreeRTOS", "ESP32", "MQTT", "AWS IoT Core / Mosquitto"],
+        "deliverable": "Working hardware firmware and real-time cloud telemetry dashboard."
+      }
+    ]
+  },
+  {
+    "id": "computer-vision-engineer",
+    "title": "Computer Vision Engineer",
+    "domain": "Artificial Intelligence & Data",
+    "description": "Engineers algorithmic and deep learning pipelines for visual recognition, object tracking, image segmentation, and edge video analytics.",
+    "sdg_impact": "Drives automated safety monitoring, precision agriculture, and advanced medical diagnostics.",
+    "industry_demand": "High",
+    "avg_salary_usd": "$125,000 - $175,000",
+    "experience_level_target": "advanced",
+    "core_skills": [
+      "Python",
+      "OpenCV",
+      "PyTorch",
+      "Convolutional Neural Networks (CNNs)",
+      "Object Detection (YOLO / Faster R-CNN)",
+      "Image Segmentation",
+      "Linear Algebra & 3D Geometry"
+    ],
+    "supplementary_skills": [
+      "TensorRT / ONNX",
+      "Vision Transformers (ViT)",
+      "C++",
+      "Docker",
+      "Camera Calibration"
+    ],
+    "soft_skills": [
+      "Spatial Reasoning",
+      "Experimental Rigor",
+      "Continuous Innovation"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Digital Image Processing: Colorspaces, Filtering, Edge Detection with OpenCV"},
+      {"week": 2, "topic": "Feature Extraction: SIFT, ORB, Keypoints & Image Stitching"},
+      {"week": 3, "topic": "Camera Models, Intrinsic/Extrinsic Parameters & Stereo Calibration"},
+      {"week": 4, "topic": "CNN Architectures: ResNet, EfficientNet & Transfer Learning in PyTorch"},
+      {"week": 5, "topic": "Object Detection Fundamentals: Anchor Boxes, IoU, NMS & Evaluation (mAP)"},
+      {"week": 6, "topic": "Real-time Object Detection with YOLOv8 / YOLOv9 Fine-tuning"},
+      {"week": 7, "topic": "Semantic and Instance Segmentation (Mask R-CNN, UNet)"},
+      {"week": 8, "topic": "Multi-Object Tracking (SORT, DeepSORT, ByteTrack)"},
+      {"week": 9, "topic": "Vision Transformers (ViT) & Self-Supervised Visual Representation"},
+      {"week": 10, "topic": "Edge Optimization with TensorRT, OpenVINO & Quantization (FP16/INT8)"},
+      {"week": 11, "topic": "Deploying Real-Time Video Analytics Streams with RTSP & FastAPI"},
+      {"week": 12, "topic": "Model Robustness, Lighting Invariance & Synthetic Data Augmentation"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Real-time Industrial PPE & Safety Violation Detector",
+        "level": "Intermediate",
+        "description": "Train and deploy a high-speed YOLO model detecting helmets and vests on construction site feeds with alert triggers.",
+        "tech_stack": ["Python", "PyTorch", "YOLOv8", "OpenCV", "FastAPI"],
+        "deliverable": "Sub-20ms latency video inference pipeline with detection alert dashboard."
+      }
+    ]
+  },
+  {
+    "id": "data-engineer",
+    "title": "Data Engineer",
+    "domain": "Artificial Intelligence & Data",
+    "description": "Builds robust, fault-tolerant batch and streaming data pipelines, distributed data lakes, and scalable architectures to feed analytics and AI systems.",
+    "sdg_impact": "Empowers data-driven productivity across enterprises and critical public services.",
+    "industry_demand": "Very High",
+    "avg_salary_usd": "$115,000 - $160,000",
+    "experience_level_target": "intermediate",
+    "core_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark (PySpark)",
+      "Data Orchestration (Airflow / Prefect)",
+      "Data Lakes & Warehouses (Snowflake / Delta Lake)",
+      "Kafka / Streaming",
+      "Docker & Linux"
+    ],
+    "supplementary_skills": [
+      "Scala / Java",
+      "Terraform",
+      "AWS / GCP Big Data Services",
+      "dbt",
+      "Data Modeling (Kimball)"
+    ],
+    "soft_skills": [
+      "Reliability Engineering",
+      "System Scalability Thinking",
+      "Data Governance Discipline"
+    ],
+    "learning_topics": [
+      {"week": 1, "topic": "Data Engineering Principles: Batch vs Streaming & Architecture Patterns"},
+      {"week": 2, "topic": "Advanced SQL & Database Performance Tuning for Massive Datasets"},
+      {"week": 3, "topic": "File Formats for Big Data: Parquet, ORC, Avro & Snappy Compression"},
+      {"week": 4, "topic": "Distributed Computing Foundations with Apache Spark & PySpark"},
+      {"week": 5, "topic": "Building Lakehouse Architectures with Delta Lake & ACID Guarantees"},
+      {"week": 6, "topic": "Workflow Orchestration: DAGs, Sensors, Backfills in Apache Airflow"},
+      {"week": 7, "topic": "Real-time Streaming Ingestion with Apache Kafka & Schema Registry"},
+      {"week": 8, "topic": "Structured Streaming in Spark for Sub-Second Processing"},
+      {"week": 9, "topic": "Data Transformations at Scale with dbt and Cloud Warehouses"},
+      {"week": 10, "topic": "Data Quality, Testing & Observability with Great Expectations"},
+      {"week": 11, "topic": "Data Lake Security, Access Controls & Cataloging (Unity Catalog)"},
+      {"week": 12, "topic": "CI/CD Deployment of Data Pipelines with Docker & Terraform"}
+    ],
+    "project_ideas": [
+      {
+        "title": "Real-Time FinTech Transaction Fraud Ingestion Pipeline",
+        "level": "Intermediate",
+        "description": "Build a streaming pipeline consuming simulated banking transactions via Kafka, processing with Spark Streaming, and storing into Delta Lake.",
+        "tech_stack": ["Python", "PySpark", "Kafka", "Delta Lake", "Docker", "Airflow"],
+        "deliverable": "Fault-tolerant streaming pipeline capable of handling 5,000 events/sec."
+      }
+    ]
+  }
+]
