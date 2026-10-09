@@ -99,6 +99,16 @@ def get_profile(profile_id: str):
         updated_at=row.get("updated_at")
     )
 
+@router.delete("/{profile_id}")
+def delete_profile(profile_id: str):
+    with get_db() as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT id FROM profiles WHERE id = ?", (profile_id,))
+        if not cursor.fetchone():
+            raise HTTPException(status_code=404, detail=f"Profile '{profile_id}' not found")
+        cursor.execute("DELETE FROM profiles WHERE id = ?", (profile_id,))
+    return {"status": "success", "message": f"Profile '{profile_id}' and associated data deleted"}
+
 @router.get("/demo/sample", response_model=StudentProfile)
 def get_sample_demo_profile():
     demo_data = StudentProfileCreate(

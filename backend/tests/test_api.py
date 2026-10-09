@@ -132,5 +132,20 @@ def test_custom_exception_handler_structure():
     assert data.get("code") == 404
     assert "not found" in data.get("message", "").lower()
 
+def test_delete_profile_endpoint():
+    # Create temporary profile
+    created = client.post("/api/profile", json={"name": "Temp Delete Student"}).json()
+    p_id = created["id"]
+    
+    # Delete profile
+    del_res = client.delete(f"/api/profile/{p_id}")
+    assert del_res.status_code == 200
+    assert del_res.json()["status"] == "success"
+
+    # Verify 404 on subsequent lookup
+    get_res = client.get(f"/api/profile/{p_id}")
+    assert get_res.status_code == 404
+
+
 
 
