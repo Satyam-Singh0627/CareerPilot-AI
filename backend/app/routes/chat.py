@@ -74,3 +74,10 @@ def get_chat_history(profile_id: str):
         rows = cursor.fetchall()
 
     return rows
+
+@router.delete("/history/{profile_id}")
+def clear_chat_history(profile_id: str):
+    with get_db() as conn:
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM chat_messages WHERE profile_id = ?", (profile_id,))
+    return {"status": "success", "message": f"Chat history cleared for profile '{profile_id}'"}

@@ -154,6 +154,22 @@ def test_export_profile_endpoint():
     assert "export_metadata" in data
     assert data["profile"]["id"] == "demo-student"
 
+def test_clear_chat_history_endpoint():
+    # Send a message to ensure history exists
+    client.post("/api/chat/message", json={
+        "profile_id": "demo-student",
+        "message": "Hello advisor"
+    })
+    
+    del_res = client.delete("/api/chat/history/demo-student")
+    assert del_res.status_code == 200
+    assert del_res.json()["status"] == "success"
+
+    hist_res = client.get("/api/chat/history/demo-student")
+    assert hist_res.status_code == 200
+    assert len(hist_res.json()) == 0
+
+
 
 
 
