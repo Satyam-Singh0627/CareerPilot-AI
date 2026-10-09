@@ -12,9 +12,11 @@ def dict_factory(cursor, row):
 
 @contextmanager
 def get_db() -> Generator[sqlite3.Connection, None, None]:
-    conn = sqlite3.connect(settings.DATABASE_PATH, check_same_thread=False)
+    conn = sqlite3.connect(settings.DATABASE_PATH, timeout=10.0, check_same_thread=False)
     conn.row_factory = dict_factory
     conn.execute("PRAGMA foreign_keys = ON;")
+    conn.execute("PRAGMA journal_mode = WAL;")
+    conn.execute("PRAGMA busy_timeout = 5000;")
     try:
         yield conn
         conn.commit()
