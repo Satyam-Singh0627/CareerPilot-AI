@@ -263,5 +263,26 @@ LLM_MODEL=gemini-1.5-flash
 
 ---
 
+## 🌐 Cloud Deployment Setup (Vercel & Render)
+
+### 1. Backend on Render
+- **Build Command:** `pip install -r backend/requirements.txt`
+- **Start Command:** `python -m uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT`
+- **Environment Variables:**
+  - `ALLOWED_ORIGINS`: `https://career-pilot-ai-henna.vercel.app,http://localhost:5173`
+  - `ALLOWED_ORIGIN_REGEX`: `https?://(localhost|127\.0\.0\.1)(:\d+)?|https://.*\.vercel\.app`
+  - *(Optional)* `GEMINI_API_KEY`: Your Google AI Studio key
+
+### 2. Frontend on Vercel
+- **Framework Preset:** Vite
+- **Root Directory:** `frontend` (or project root if configured)
+- **Build Command:** `npm run build`
+- **Output Directory:** `dist`
+- **Environment Variable:**
+  - `VITE_API_URL`: `https://careerpilot-ai-backend-3b8o.onrender.com` (Your live Render backend URL)
+
+---
+
 ## ⚖️ Academic Integrity & Ethical Note
 CareerPilot AI is an educational advisory system designed for student empowerment. It uses transparent skill-matching metrics to help students prioritize learning. It does **not** claim to predict actual employer hiring outcomes or invent model training statistics.
+

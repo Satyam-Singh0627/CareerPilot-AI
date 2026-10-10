@@ -23,7 +23,11 @@ class Settings(BaseModel):
     # CORS Settings
     ALLOWED_ORIGINS: str = os.getenv(
         "ALLOWED_ORIGINS",
-        "http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:3000"
+        "http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:3000,https://career-pilot-ai-henna.vercel.app"
+    )
+    ALLOWED_ORIGIN_REGEX: str = os.getenv(
+        "ALLOWED_ORIGIN_REGEX",
+        r"https?://(localhost|127\.0\.0\.1)(:\d+)?|https://.*\.vercel\.app"
     )
     
     # LLM Settings (Optional with full deterministic fallback)

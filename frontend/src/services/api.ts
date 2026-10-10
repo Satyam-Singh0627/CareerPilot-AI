@@ -5,18 +5,60 @@ import {
   SkillGapReport,
   LearningRoadmap,
   ProjectRecommendation,
-  ReadinessReport,
-  ChatMessage
+  ReadinessReport
 } from '../types';
 
-const API_BASE = '/api';
+/**
+ * Resolves the backend base URL for API requests.
+ * Normalizes input so trailing slashes and redundant '/api' segments are cleanly handled:
+ * - Unset (dev mode / local proxy): '/api'
+ * - 'https://backend.onrender.com' -> 'https://backend.onrender.com/api'
+ * - 'https://backend.onrender.com/' -> 'https://backend.onrender.com/api'
+ * - 'https://backend.onrender.com/api' -> 'https://backend.onrender.com/api'
+ * - 'https://backend.onrender.com/api/' -> 'https://backend.onrender.com/api'
+ */
+export function getApiBaseUrl(): string {
+  const envUrl = (
+    import.meta.env.VITE_API_URL ||
+    import.meta.env.VITE_API_BASE_URL ||
+    ''
+  ).trim();
+
+  if (!envUrl) {
+    return '/api';
+  }
+
+  const cleanUrl = envUrl.replace(/\/+$/, '');
+  return cleanUrl.endsWith('/api') ? cleanUrl : `${cleanUrl}/api`;
+}
+
+export const API_BASE = getApiBaseUrl();
+
+async function handleResponse<T = any>(res: Response, fallbackError: string): Promise<T> {
+  if (!res.ok) {
+    let errorDetail = fallbackError;
+    try {
+      const data = await res.json();
+      if (typeof data.detail === 'string') {
+        errorDetail = data.detail;
+      } else if (Array.isArray(data.detail) && data.detail[0]?.msg) {
+        errorDetail = data.detail.map((d: any) => d.msg).join(', ');
+      } else if (typeof data.message === 'string') {
+        errorDetail = data.message;
+      }
+    } catch {
+      // Body is not JSON
+    }
+    throw new Error(errorDetail);
+  }
+  return res.json();
+}
 
 export const api = {
   // Health
   async getHealth() {
     const res = await fetch(`${API_BASE}/health`);
-    if (!res.ok) throw new Error('Health check failed');
-    return res.json();
+    return handleResponse(res, 'Health check failed');
   },
 
   // Careers
@@ -25,20 +67,17 @@ export const api = {
     if (domain) params.append('domain', domain);
     if (search) params.append('search', search);
     const res = await fetch(`${API_BASE}/careers?${params.toString()}`);
-    if (!res.ok) throw new Error('Failed to fetch careers');
-    return res.json();
+    return handleResponse<Career[]>(res, 'Failed to fetch careers');
   },
 
   async getDomains(): Promise<string[]> {
     const res = await fetch(`${API_BASE}/careers/domains`);
-    if (!res.ok) throw new Error('Failed to fetch domains');
-    return res.json();
+    return handleResponse<string[]>(res, 'Failed to fetch domains');
   },
 
   async getCareerById(careerId: string): Promise<Career> {
     const res = await fetch(`${API_BASE}/careers/${careerId}`);
-    if (!res.ok) throw new Error('Failed to fetch career details');
-    return res.json();
+    return handleResponse<Career>(res, 'Failed to fetch career details');
   },
 
   // Profile
@@ -48,20 +87,17 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(profile),
     });
-    if (!res.ok) throw new Error('Failed to save profile');
-    return res.json();
+    return handleResponse<StudentProfile>(res, 'Failed to save profile');
   },
 
   async getProfile(profileId: string): Promise<StudentProfile> {
     const res = await fetch(`${API_BASE}/profile/${profileId}`);
-    if (!res.ok) throw new Error('Failed to load profile');
-    return res.json();
+    return handleResponse<StudentProfile>(res, 'Failed to load profile');
   },
 
   async getDemoProfile(): Promise<StudentProfile> {
     const res = await fetch(`${API_BASE}/profile/demo/sample`);
-    if (!res.ok) throw new Error('Failed to load demo profile');
-    return res.json();
+    return handleResponse<StudentProfile>(res, 'Failed to load demo profile');
   },
 
   async login(email: string, name?: string): Promise<StudentProfile> {
@@ -70,8 +106,7 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, name: name || '' }),
     });
-    if (!res.ok) throw new Error('Login failed');
-    return res.json();
+    return handleResponse<StudentProfile>(res, 'Login failed');
   },
 
   // Recommendations & Full Agent Analysis
@@ -92,8 +127,7 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(profile),
     });
-    if (!res.ok) throw new Error('Multi-agent analysis failed');
-    return res.json();
+    return handleResponse(res, 'Multi-agent analysis failed');
   },
 
   // Roadmap
@@ -103,15 +137,13 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ profile, career_id: careerId }),
     });
-    if (!res.ok) throw new Error('Failed to generate roadmap');
-    return res.json();
+    return handleResponse<LearningRoadmap>(res, 'Failed to generate roadmap');
   },
 
   // Progress
   async getProgress(profileId: string, careerId: string) {
     const res = await fetch(`${API_BASE}/progress/${profileId}/${careerId}`);
-    if (!res.ok) throw new Error('Failed to load progress');
-    return res.json();
+    return handleResponse(res, 'Failed to load progress');
   },
 
   async updateProgress(payload: {
@@ -127,8 +159,7 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     });
-    if (!res.ok) throw new Error('Failed to update progress');
-    return res.json();
+    return handleResponse(res, 'Failed to update progress');
   },
 
   // Chat
@@ -138,8 +169,7 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ profile_id: profileId, message, career_id: careerId, profile }),
     });
-    if (!res.ok) throw new Error('Failed to send message');
-    return res.json();
+    return handleResponse(res, 'Failed to send message');
   },
 
   async getChatHistory(profileId: string): Promise<any[]> {

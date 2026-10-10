@@ -56,12 +56,20 @@ app.add_middleware(RateLimitingMiddleware)
 app.add_middleware(SecurityHeadersMiddleware)
 
 # CORS middleware for development and production frontend
-allowed_origins_list = [origin.strip() for origin in settings.ALLOWED_ORIGINS.split(",") if origin.strip()]
+default_origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://career-pilot-ai-henna.vercel.app",
+]
+env_origins = [origin.strip() for origin in settings.ALLOWED_ORIGINS.split(",") if origin.strip()]
+allowed_origins_list = list(dict.fromkeys(default_origins + env_origins))
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins_list,
-    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1)(:\d+)?",
+    allow_origin_regex=settings.ALLOWED_ORIGIN_REGEX,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

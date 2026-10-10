@@ -169,6 +169,54 @@ def test_clear_chat_history_endpoint():
     assert hist_res.status_code == 200
     assert len(hist_res.json()) == 0
 
+def test_cors_preflight_production_vercel_domain():
+    res = client.options(
+        "/api/profile/login",
+        headers={
+            "Origin": "https://career-pilot-ai-henna.vercel.app",
+            "Access-Control-Request-Method": "POST",
+            "Access-Control-Request-Headers": "content-type",
+        }
+    )
+    assert res.status_code == 200
+    assert res.headers.get("access-control-allow-origin") == "https://career-pilot-ai-henna.vercel.app"
+    assert res.headers.get("access-control-allow-credentials") == "true"
+
+def test_cors_preflight_preview_vercel_domain():
+    res = client.options(
+        "/api/profile/login",
+        headers={
+            "Origin": "https://career-pilot-ai-preview-test.vercel.app",
+            "Access-Control-Request-Method": "POST",
+            "Access-Control-Request-Headers": "content-type",
+        }
+    )
+    assert res.status_code == 200
+    assert res.headers.get("access-control-allow-origin") == "https://career-pilot-ai-preview-test.vercel.app"
+    assert res.headers.get("access-control-allow-credentials") == "true"
+
+def test_cors_preflight_disallowed_origin():
+    res = client.options(
+        "/api/profile/login",
+        headers={
+            "Origin": "https://unauthorized-domain.com",
+            "Access-Control-Request-Method": "POST",
+            "Access-Control-Request-Headers": "content-type",
+        }
+    )
+    assert res.status_code == 400
+    assert "Disallowed CORS origin" in res.text
+
+def test_login_existing_user_retrieval():
+    email = "returning.scholar@university.edu"
+    first = client.post("/api/profile/login", json={"email": email, "name": "Returning Scholar"}).json()
+    assert first["email"] == email
+    first_id = first["id"]
+
+    second = client.post("/api/profile/login", json={"email": email}).json()
+    assert second["id"] == first_id
+    assert second["name"] == "Returning Scholar"
+
 
 
 

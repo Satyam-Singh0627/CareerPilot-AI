@@ -23,8 +23,14 @@ export const AuthModal: React.FC = () => {
       await login(email.trim(), name.trim());
       setEmail('');
       setName('');
-    } catch {
-      setError('Unable to authenticate. Please check your network and try again.');
+    } catch (err: unknown) {
+      if (err instanceof TypeError && err.message.toLowerCase().includes('fetch')) {
+        setError('Unable to reach CareerPilot backend. Please check your network or verify the backend server is active and try again.');
+      } else if (err instanceof Error && err.message) {
+        setError(err.message);
+      } else {
+        setError('Unable to authenticate. Please check your network and try again.');
+      }
     } finally {
       setIsSubmitting(false);
     }

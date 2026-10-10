@@ -57,6 +57,22 @@ interface CareerPilotContextType {
 
 const CareerPilotContext = createContext<CareerPilotContextType | undefined>(undefined);
 
+const DEFAULT_DEMO_PROFILE: StudentProfile = {
+  id: 'demo-student',
+  name: 'Alex Rivera',
+  email: 'alex.rivera@university.edu',
+  education_level: 'Undergraduate (Junior)',
+  field_of_study: 'Computer Science & Data',
+  graduation_year: 2026,
+  current_skills: ['Python', 'SQL', 'Pandas', 'Git', 'JavaScript', 'HTML5 & CSS3'],
+  target_roles: ['Data Scientist', 'AI & Machine Learning Engineer', 'Full Stack Web Developer'],
+  interests: ['Artificial Intelligence', 'Predictive Analytics', 'Cloud Technology', 'Sustainable Tech'],
+  experience_level: 'intermediate',
+  bio: 'Junior CS undergraduate passionate about data science and building intelligent web applications. Looking for summer 2026 internships.',
+  preferred_work_style: 'hybrid',
+  weekly_hours_available: 15,
+};
+
 export const CareerPilotProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [profile, setProfileState] = useState<StudentProfile | null>(() => {
     const saved = localStorage.getItem('careerpilot_profile');
@@ -223,9 +239,19 @@ export const CareerPilotProvider: React.FC<{ children: ReactNode }> = ({ childre
   const loadDemoProfile = async () => {
     setIsLoading(true);
     try {
-      const demo = await api.getDemoProfile();
+      let demo: StudentProfile;
+      try {
+        demo = await api.getDemoProfile();
+      } catch (err) {
+        console.warn('Backend demo endpoint unavailable, using offline demo profile:', err);
+        demo = DEFAULT_DEMO_PROFILE;
+      }
       saveProfileToStorage(demo, true);
-      await runAnalysis(demo);
+      try {
+        await runAnalysis(demo);
+      } catch {
+        // Analysis error handled
+      }
       setActiveTab('dashboard');
     } catch (err) {
       console.error('Failed to load demo profile:', err);
